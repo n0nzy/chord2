@@ -1,0 +1,9 @@
+#execute client: ./runclient
+(Please execute ./runserver5550 first!)
+#execute server: ./runserver5550
+#execute server: ./runserver5553
+#execute server: ./runserver5559
+#execute server: ./runserver5699
+#execute server: ./runserver7899
+
+Please execute in seperate terminal  windows

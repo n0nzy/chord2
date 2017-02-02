@@ -1,0 +1,22 @@
+{
+	"serverID" : "jsonrpc_server05",
+	"protocol" : "tcp",
+	"ipAddress" : "127.0.0.1",
+	"port" : 7899,
+	"persistentStorageContainer":
+	{
+		"file" : "./dict3.7899.json"
+	},
+
+	"methods":
+	[
+		"lookup",
+		"insert",
+		"insertOrUpdate",
+		"delete",
+		"listKeys",
+		"listIDs",
+		"shutdown",
+		"purge"
+	]
+}

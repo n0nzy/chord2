@@ -1,0 +1,1 @@
+go run server.go config.7899.json 127.0.0.1 5550

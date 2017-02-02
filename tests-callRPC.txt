@@ -1,0 +1,58 @@
+Insert
+{"method" : "insert", "params": ["keyH", "relH", {"content":"some string H","size":"1KB","created":"3/18/2015, 8:50:26","modified":"3/20/2015, 16:40:03","accessed":"3/20/2015, 18:09:54","permission":"RW"}] }
+{"method" : "insert", "params": ["keyI", "relI", {"content":"some string I","size":"2KB","created":"3/19/2015, 8:50:26","modified":"3/21/2015, 17:40:03","accessed":"3/21/2015, 17:09:54","permission":"RW"}] }
+{"method" : "insert", "params": ["keyJ", "relJ", {"content":"some string J","size":"3KB","created":"4/21/2015, 9:50:26","modified":"4/21/2015, 16:40:03","accessed":"4/21/2015, 18:09:54","permission":"RW"}] }
+{"method" : "insert", "params": ["keyK", "relK", {"content":"some string K","size":"1KB","created":"5/22/2015, 8:50:26","modified":"5/22/2015, 16:40:03","accessed":"5/22/2015, 18:09:54","permission":"R"}] }
+{"method" : "insert", "params": ["keyL", "relL", {"content":"some string L","size":"4KB","created":"6/23/2015, 8:50:26","modified":"6/23/2015, 16:40:03","accessed":"6/23/2015, 18:09:54","permission":"R"}] }
+
+{"method" : "insertorupdate", "params": ["keyD", "relA", {"content":"some stL","size":"4KB","created":"6/23/2015, 8:50:26","modified":"6/23/2015, 16:40:03","accessed":"6/23/2015, 18:09:54","permission":"R"}] }
+==============================================
+lookups
+{"method" : "lookup", "params": ["keyA", "relA"] }
+{"method" : "lookup", "params": ["keyB", "relB"] }
+{"method" : "lookup", "params": ["keyC", "relC"] }
+{"method" : "lookup", "params": ["keyD", ""] }
+{"method" : "lookup", "params": ["keyE", "relE"] }
+{"method" : "lookup", "params": ["keyF", "relF"] }
+{"method" : "lookup", "params": ["keyG", "relG"] }
+
+{"method" : "lookup", "params": ["keyH", "relH"] }
+{"method" : "lookup", "params": ["keyI", "relI"] }
+==============================================
+delete 
+Client → Server :: 
+{"method" :"delete","params": ["keyA","relA"] } 
+{"method" :"delete","params": ["keyB","relB"] } 
+{"method" :"delete","params": ["keyC","relC"] } 
+{"method" :"delete","params": ["keyD","relA"] } 
+
+==============================================
+listKeys :: return a sequence of the unique keys in DICT3 
+Client → Server :: 
+{"method" :"listKeys","params": []} 
+
+Server → Client :: 
+{"result" : ["key1","key2" ],"error":null} 
+
+===================================================
+listIDs :: return a sequence of the unique (key, relationship) pairs in DICT3 
+Client → Server :: 
+{"method" :"listIDs","params": [] } 
+
+Server → Client :: 
+{"result" : [ ["key1","rel1"], ["key2","rel2"] ],"error":null} 
+
+==================================================
+shutdown()​ :: the server process terminates. 
+ 
+Client → Server :: 
+{"method" :"shutdown","params": ["200"],"id":null} 
+{"method" :"shutdown","params": ["218"],"id":null} 
+
+==================================================
+purge()​ :: close some RW data
+ 
+Client → Server :: 
+{"method" :"purge","params": ["6"],"id":null} 
+
+
